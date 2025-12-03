@@ -74,3 +74,148 @@
                 margin: 1rem 0;
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Minimal Carousel Custom Styles - Using Bootstrap Primarily */
+.carousel-item {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Blur Effect on Background */
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(4px);
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Dark Overlay */
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+    z-index: 2;
+}
+
+/* Caption Positioning */
+.carousel-caption {
+    position: static;
+    z-index: 10;
+    padding: 0;
+}
+
+/* Content Card with Glassmorphism */
+.carousel-content {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Text Styling */
+.carousel-caption h2 {
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.carousel-caption p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Button Enhancement */
+.carousel-caption .btn-danger {
+    background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    border: none;
+    box-shadow: 0 8px 30px rgba(220, 53, 69, 0.5);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.carousel-caption .btn-danger:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(220, 53, 69, 0.6);
+    background: linear-gradient(135deg, #e04d3b 0%, #d62839 100%);
+}
+
+/* Modern Indicators */
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+}
+
+.carousel-indicators button.active {
+    width: 35px;
+    border-radius: 8px;
+    background-color: #dc3545;
+}
+
+/* Control Buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+}
+
+/* Slide Backgrounds */
+.slide-1 {
+    background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1920&q=80');
+}
+
+.slide-2 {
+    background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1920&q=80');
+}
+
+.slide-3 {
+    background-image: url('https://images.unsplash.com/photo-1445205170230-053b83016050?w=1920&q=80');
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 450px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 400px;
+    }
+    
+    .carousel-content {
+        padding: 2rem 1.5rem !important;
+    }
+}

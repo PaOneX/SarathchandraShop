@@ -5,9 +5,9 @@
  
 // }
 
-fetch("components/login/login.html").then(res=>res.text()).then(data=>{
-    document.getElementById("root").innerHTML=data;
-})  
+// fetch("components/login/login.html").then(res=>res.text()).then(data=>{
+//     document.getElementById("root").innerHTML=data;
+// })  
 
 
 // navigator.geolocation.getCurrentPosition(getPosition)
