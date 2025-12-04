@@ -1,6 +1,8 @@
 .navbar {
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             padding: 1rem 0;
+            position: relative;
+            z-index: 1030;
         }
         
         .navbar-brand {
@@ -89,7 +91,7 @@
 
 
         .carousel-item {
-            height: 600px;
+            height: 500px;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -102,67 +104,21 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             z-index: 1;
         }
 
         .carousel-caption {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: static;
             z-index: 10;
-            width: 90%;
-            max-width: 800px;
-            bottom: auto;
-            right: auto;
         }
 
         .carousel-content {            
-            text-align: left;
-            padding: 5px;
             background: transparent;
-            margin-left: 380px;
         }
 
         .carousel-subtitle {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 1rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-
-        .carousel-content h2 {
-            color: #ffffff;
-            font-size: 4rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            margin-bottom: 2rem;
-            line-height: 1.2;
-        }
-
-        /* Modern Button */
-        .btn-explore {
-            background-color: #f10f0f;
-            color: #000000;
-            border: none;
-            padding: 15px 45px;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            text-transform: capitalize;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.671);
-        }
-
-        .btn-explore:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.973);
-            background: #f8f9fa;
-            color: #000000;
+            letter-spacing: 2px;
         }
 
         /* Modern Indicators */
@@ -261,3 +217,93 @@
                 font-size: 0.9rem;
             }
         }
+
+/* Product Cards - Using Bootstrap with Minimal Custom CSS */
+
+/* Product Card Hover Effect */
+.product-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Product Image Container */
+.product-image {
+    position: relative;
+    overflow: hidden;
+    height: 350px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+/* Product Badge */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+}
+
+/* Product Quick Action Icons */
+.product-icons {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-icons {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Star Rating Color */
+.stars {
+    color: #ffc107;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product-image {
+        height: 280px;
+    }
+}
