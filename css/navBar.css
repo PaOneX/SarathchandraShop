@@ -88,7 +88,6 @@
 
 
 
-        /* Clean & Modern Carousel Styles */
         .carousel-item {
             height: 600px;
             background-size: cover;
@@ -96,7 +95,6 @@
             position: relative;
         }
 
-        /* Clean Dark Overlay */
         .carousel-item::before {
             content: '';
             position: absolute;
@@ -108,7 +106,6 @@
             z-index: 1;
         }
 
-        /* Caption Positioning */
         .carousel-caption {
             position: absolute;
             top: 50%;
@@ -121,11 +118,11 @@
             right: auto;
         }
 
-        /* Clean Content Styling */
-        .carousel-content {
+        .carousel-content {            
             text-align: left;
-            padding: 0;
+            padding: 5px;
             background: transparent;
+            margin-left: 380px;
         }
 
         .carousel-subtitle {
@@ -137,7 +134,6 @@
             text-transform: uppercase;
         }
 
-        /* Text Styling */
         .carousel-content h2 {
             color: #ffffff;
             font-size: 4rem;
@@ -145,12 +141,11 @@
             letter-spacing: 1px;
             margin-bottom: 2rem;
             line-height: 1.2;
-            margin-left:280px;
         }
 
         /* Modern Button */
         .btn-explore {
-            background: #ffffff;
+            background-color: #f10f0f;
             color: #000000;
             border: none;
             padding: 15px 45px;
@@ -160,12 +155,12 @@
             text-transform: capitalize;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.671);
         }
 
         .btn-explore:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.973);
             background: #f8f9fa;
             color: #000000;
         }
