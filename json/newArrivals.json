@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "category": "Men",
+      "title": "Black Hoodie",
+      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&q=80",
+      "badge": { "text": "-30%", "type": "danger" },
+      "rating": { "stars": 4.5, "reviews": 156 },
+      "price": { "current": 44.99, "old": 64.99, "discountPercent": 30 }
+    },
+    {
+      "id": 2,
+      "category": "Women",
+      "title": "Floral Summer Dress",
+      "image": "https://images.unsplash.com/photo-1520975918318-3e88f1a8f6c2?w=500&q=80",
+      "badge": { "text": "New", "type": "primary" },
+      "rating": { "stars": 4.8, "reviews": 210 },
+      "price": { "current": 39.99, "old": null, "discountPercent": null }
+    },
+    {
+      "id": 3,
+      "category": "Kids",
+      "title": "Blue Denim Jacket",
+      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&q=80",
+      "badge": { "text": "-15%", "type": "warning" },
+      "rating": { "stars": 4.3, "reviews": 88 },
+      "price": { "current": 29.75, "old": 34.99, "discountPercent": 15 }
+    },
+    {
+      "id": 4,
+      "category": "Men",
+      "title": "Classic White T-Shirt",
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80",
+      "badge": null,
+      "rating": { "stars": 4.6, "reviews": 320 },
+      "price": { "current": 19.99, "old": null, "discountPercent": null }
+    },
+    {
+      "id": 5,
+      "category": "Women",
+      "title": "Black Leather Jacket",
+      "image": "https://images.unsplash.com/photo-1495121605193-b116b5b09d18?w=500&q=80",
+      "badge": { "text": "-20%", "type": "danger" },
+      "rating": { "stars": 4.7, "reviews": 402 },
+      "price": { "current": 89.99, "old": 112.50, "discountPercent": 20 }
+    },
+    {
+      "id": 6,
+      "category": "Men",
+      "title": "Grey Sweatpants",
+      "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500&q=80",
+      "badge": null,
+      "rating": { "stars": 4.4, "reviews": 190 },
+      "price": { "current": 25.99, "old": null, "discountPercent": null }
+    },
+    {
+      "id": 7,
+      "category": "Accessories",
+      "title": "Stylish Wristwatch",
+      "image": "https://images.unsplash.com/photo-1524594224059-4f4b2a67d2b5?w=500&q=80",
+      "badge": { "text": "Hot", "type": "danger" },
+      "rating": { "stars": 4.9, "reviews": 510 },
+      "price": { "current": 129.99, "old": 159.99, "discountPercent": 19 }
+    },
+    {
+      "id": 8,
+      "category": "Women",
+      "title": "High-Waist Jeans",
+      "image": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=500&q=80",
+      "badge": null,
+      "rating": { "stars": 4.2, "reviews": 98 },
+      "price": { "current": 32.50, "old": 40.00, "discountPercent": 19 }
+    },
+    {
+      "id": 9,
+      "category": "Kids",
+      "title": "Red Hoodie",
+      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80",
+      "badge": { "text": "New", "type": "primary" },
+      "rating": { "stars": 4.6, "reviews": 75 },
+      "price": { "current": 27.99, "old": null, "discountPercent": null }
+    },
+    {
+      "id": 10,
+      "category": "Men",
+      "title": "Blue Checked Shirt",
+      "image": "https://images.unsplash.com/photo-1587740896339-1e8b1ec3b553?w=500&q=80",
+      "badge": null,
+      "rating": { "stars": 4.5, "reviews": 144 },
+      "price": { "current": 34.99, "old": 42.99, "discountPercent": 19 }
+    },
+    {
+      "id": 11,
+      "category": "Women",
+      "title": "Beige Winter Coat",
+      "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=80",
+      "badge": { "text": "-25%", "type": "danger" },
+      "rating": { "stars": 4.9, "reviews": 260 },
+      "price": { "current": 119.99, "old": 159.99, "discountPercent": 25 }
+    },
+    {
+      "id": 12,
+      "category": "Accessories",
+      "title": "Black Backpack",
+      "image": "https://images.unsplash.com/photo-1501870190083-767a26d7c7a5?w=500&q=80",
+      "badge": null,
+      "rating": { "stars": 4.4, "reviews": 130 },
+      "price": { "current": 39.99, "old": 48.99, "discountPercent": 18 }
+    }
+]
+
