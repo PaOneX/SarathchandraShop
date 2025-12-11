@@ -18,7 +18,6 @@ async function home() {
 // console.log(position)
 // }
 
-// Function to generate product card HTML
 function generateProductCard(item) {
   const fullStars = Math.floor(item.rating.stars);
   const hasHalfStar = item.rating.stars % 1 !== 0;
@@ -83,7 +82,6 @@ function generateProductCard(item) {
   return html;
 }
 
-// Load women's products into cardsection1
 async function loadWomenProducts() {
   try {
     let res = await fetch("json/newArrivals.json");
@@ -108,7 +106,6 @@ async function loadWomenProducts() {
   }
 }
 
-// Load new arrivals into cardsection0
 async function loadNewArrivals() {
   try {
     let res = await fetch("json/newArrivals.json");
@@ -119,7 +116,6 @@ async function loadNewArrivals() {
     const container = document.getElementById("NewArrivalcardSection");
     if (!container) return;
 
-    // Filter products with "New" badge
     const newProducts = data.filter(
       (item) => item.badge && item.badge.text === "New"
     );
@@ -135,4 +131,3 @@ async function loadNewArrivals() {
   }
 }
 
-// Call on page load
