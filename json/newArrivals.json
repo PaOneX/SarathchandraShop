@@ -1,111 +1,436 @@
 [
-    {
-      "id": 1,
-      "category": "Men",
-      "title": "Black Hoodie",
-      "image": "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500&q=80",
-      "badge": { "text": "-30%", "type": "danger" },
-      "rating": { "stars": 4.5, "reviews": 156 },
-      "price": { "current": 44.99, "old": 64.99, "discountPercent": 30 }
-    },
-    {
-      "id": 2,
-      "category": "Women",
-      "title": "Floral Summer Dress",
-      "image": "https://images.unsplash.com/photo-1520975918318-3e88f1a8f6c2?w=500&q=80",
-      "badge": { "text": "New", "type": "primary" },
-      "rating": { "stars": 4.8, "reviews": 210 },
-      "price": { "current": 39.99, "old": null, "discountPercent": null }
-    },
-    {
-      "id": 3,
-      "category": "Kids",
-      "title": "Blue Denim Jacket",
-      "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=500&q=80",
-      "badge": { "text": "-15%", "type": "warning" },
-      "rating": { "stars": 4.3, "reviews": 88 },
-      "price": { "current": 29.75, "old": 34.99, "discountPercent": 15 }
-    },
-    {
-      "id": 4,
-      "category": "Men",
-      "title": "Classic White T-Shirt",
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80",
-      "badge": null,
-      "rating": { "stars": 4.6, "reviews": 320 },
-      "price": { "current": 19.99, "old": null, "discountPercent": null }
-    },
-    {
-      "id": 5,
-      "category": "Women",
-      "title": "Black Leather Jacket",
-      "image": "https://images.unsplash.com/photo-1495121605193-b116b5b09d18?w=500&q=80",
-      "badge": { "text": "-20%", "type": "danger" },
-      "rating": { "stars": 4.7, "reviews": 402 },
-      "price": { "current": 89.99, "old": 112.50, "discountPercent": 20 }
-    },
-    {
-      "id": 6,
-      "category": "Men",
-      "title": "Grey Sweatpants",
-      "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500&q=80",
-      "badge": null,
-      "rating": { "stars": 4.4, "reviews": 190 },
-      "price": { "current": 25.99, "old": null, "discountPercent": null }
-    },
-    {
-      "id": 7,
-      "category": "Accessories",
-      "title": "Stylish Wristwatch",
-      "image": "https://images.unsplash.com/photo-1524594224059-4f4b2a67d2b5?w=500&q=80",
-      "badge": { "text": "Hot", "type": "danger" },
-      "rating": { "stars": 4.9, "reviews": 510 },
-      "price": { "current": 129.99, "old": 159.99, "discountPercent": 19 }
-    },
-    {
-      "id": 8,
-      "category": "Women",
-      "title": "High-Waist Jeans",
-      "image": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=500&q=80",
-      "badge": null,
-      "rating": { "stars": 4.2, "reviews": 98 },
-      "price": { "current": 32.50, "old": 40.00, "discountPercent": 19 }
-    },
-    {
-      "id": 9,
-      "category": "Kids",
-      "title": "Red Hoodie",
-      "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80",
-      "badge": { "text": "New", "type": "primary" },
-      "rating": { "stars": 4.6, "reviews": 75 },
-      "price": { "current": 27.99, "old": null, "discountPercent": null }
-    },
-    {
-      "id": 10,
-      "category": "Men",
-      "title": "Blue Checked Shirt",
-      "image": "https://images.unsplash.com/photo-1587740896339-1e8b1ec3b553?w=500&q=80",
-      "badge": null,
-      "rating": { "stars": 4.5, "reviews": 144 },
-      "price": { "current": 34.99, "old": 42.99, "discountPercent": 19 }
-    },
-    {
-      "id": 11,
-      "category": "Women",
-      "title": "Beige Winter Coat",
-      "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=80",
-      "badge": { "text": "-25%", "type": "danger" },
-      "rating": { "stars": 4.9, "reviews": 260 },
-      "price": { "current": 119.99, "old": 159.99, "discountPercent": 25 }
-    },
-    {
-      "id": 12,
-      "category": "Accessories",
-      "title": "Black Backpack",
-      "image": "https://images.unsplash.com/photo-1501870190083-767a26d7c7a5?w=500&q=80",
-      "badge": null,
-      "rating": { "stars": 4.4, "reviews": 130 },
-      "price": { "current": 39.99, "old": 48.99, "discountPercent": 18 }
-    }
+  {
+    "id": 13,
+    "category": "Men",
+    "title": "Navy Bomber Jacket",
+    "image": "https://images.unsplash.com/photo-1520975918318-3e88f1a8f6c2?w=500&q=80",
+    "badge": { "text": "-10%", "type": "warning" },
+    "rating": { "stars": 4.7, "reviews": 240 },
+    "price": { "current": 53.99, "old": 59.99, "discountPercent": 10 }
+  },
+  {
+    "id": 14,
+    "category": "Men",
+    "title": "Olive Cargo Pants",
+    "image": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.3, "reviews": 178 },
+    "price": { "current": 27.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 15,
+    "category": "Men",
+    "title": "Black Sports Jacket",
+    "image": "https://images.unsplash.com/photo-1542060748-10c28b62716d?w=500&q=80",
+    "badge": { "text": "Hot", "type": "danger" },
+    "rating": { "stars": 4.8, "reviews": 320 },
+    "price": { "current": 74.99, "old": 89.99, "discountPercent": 17 }
+  },
+  {
+    "id": 16,
+    "category": "Men",
+    "title": "Grey Polo Shirt",
+    "image": "https://images.unsplash.com/photo-1503342250614-2b09e17f3ba0?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.5, "reviews": 112 },
+    "price": { "current": 22.50, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 17,
+    "category": "Men",
+    "title": "Slim Fit Jeans",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.4, "reviews": 189 },
+    "price": { "current": 39.99, "old": 49.99, "discountPercent": 20 }
+  },
+  {
+    "id": 18,
+    "category": "Men",
+    "title": "Black Formal Shoes",
+    "image": "https://images.unsplash.com/photo-1520523839897-bd7a4a926ad3?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.9, "reviews": 510 },
+    "price": { "current": 99.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 19,
+    "category": "Men",
+    "title": "Dark Brown Belt",
+    "image": "https://images.unsplash.com/photo-1565689574289-c3f9f9277d5c?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.1, "reviews": 95 },
+    "price": { "current": 14.99, "old": 18.99, "discountPercent": 21 }
+  },
+  {
+    "id": 20,
+    "category": "Men",
+    "title": "Winter Puffer Jacket",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?w=500&q=80",
+    "badge": { "text": "-35%", "type": "danger" },
+    "rating": { "stars": 4.8, "reviews": 410 },
+    "price": { "current": 109.99, "old": 169.99, "discountPercent": 35 }
+  },
+  {
+    "id": 21,
+    "category": "Men",
+    "title": "Sky Blue Hoodie",
+    "image": "https://images.unsplash.com/photo-1542062703-20f2f1cc84c7?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.5, "reviews": 150 },
+    "price": { "current": 28.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 22,
+    "category": "Men",
+    "title": "Training Shorts",
+    "image": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=500&q=80",
+    "badge": { "text": "Hot", "type": "danger" },
+    "rating": { "stars": 4.7, "reviews": 260 },
+    "price": { "current": 19.99, "old": 25.99, "discountPercent": 23 }
+  },
+  {
+    "id": 23,
+    "category": "Men",
+    "title": "Office Suit Blazer",
+    "image": "https://images.unsplash.com/photo-1520975918318-3e88f1a8f6c2?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.9, "reviews": 330 },
+    "price": { "current": 149.99, "old": 169.99, "discountPercent": 12 }
+  },
+  {
+    "id": 24,
+    "category": "Men",
+    "title": "Beige Chinos",
+    "image": "https://images.unsplash.com/photo-1545486332-9adf4a5e7f06?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.4, "reviews": 104 },
+    "price": { "current": 29.50, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 25,
+    "category": "Women",
+    "title": "Pink Crop Top",
+    "image": "https://images.unsplash.com/photo-1530984988758-75b2f1c6c5f3?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.6, "reviews": 180 },
+    "price": { "current": 18.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 26,
+    "category": "Women",
+    "title": "Brown Leather Boots",
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
+    "badge": { "text": "-20%", "type": "danger" },
+    "rating": { "stars": 4.8, "reviews": 300 },
+    "price": { "current": 72.00, "old": 90.00, "discountPercent": 20 }
+  },
+  {
+    "id": 27,
+    "category": "Women",
+    "title": "Cotton Long Skirt",
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df564?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.4, "reviews": 145 },
+    "price": { "current": 23.50, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 28,
+    "category": "Women",
+    "title": "Grey Oversized Hoodie",
+    "image": "https://images.unsplash.com/photo-1542060748-10c28b62716d?w=500&q=80",
+    "badge": { "text": "Hot", "type": "danger" },
+    "rating": { "stars": 4.9, "reviews": 380 },
+    "price": { "current": 34.99, "old": 44.99, "discountPercent": 22 }
+  },
+  {
+    "id": 29,
+    "category": "Women",
+    "title": "Blue Casual Jeans",
+    "image": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.3, "reviews": 220 },
+    "price": { "current": 32.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 30,
+    "category": "Women",
+    "title": "Black Party Dress",
+    "image": "https://images.unsplash.com/photo-1520975918318-3e88f1a8f6c2?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.9, "reviews": 550 },
+    "price": { "current": 59.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 31,
+    "category": "Women",
+    "title": "Cream Knit Sweater",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?w=500&q=80",
+    "badge": { "text": "-15%", "type": "warning" },
+    "rating": { "stars": 4.6, "reviews": 170 },
+    "price": { "current": 29.75, "old": 34.99, "discountPercent": 15 }
+  },
+  {
+    "id": 32,
+    "category": "Women",
+    "title": "Red High Heels",
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.8, "reviews": 410 },
+    "price": { "current": 49.99, "old": 59.99, "discountPercent": 17 }
+  },
+  {
+    "id": 33,
+    "category": "Women",
+    "title": "Green Summer Skirt",
+    "image": "https://images.unsplash.com/photo-1519033460845-07dc5e5dfb3c?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.2, "reviews": 98 },
+    "price": { "current": 26.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 34,
+    "category": "Women",
+    "title": "White Silk Blouse",
+    "image": "https://images.unsplash.com/photo-1542060748-10c28b62716d?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.7, "reviews": 270 },
+    "price": { "current": 38.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 35,
+    "category": "Women",
+    "title": "Elegant Winter Coat",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?w=500&q=80",
+    "badge": { "text": "-30%", "type": "danger" },
+    "rating": { "stars": 4.9, "reviews": 310 },
+    "price": { "current": 104.50, "old": 149.99, "discountPercent": 30 }
+  },
+  {
+    "id": 36,
+    "category": "Women",
+    "title": "Casual Sleeveless Top",
+    "image": "https://images.unsplash.com/photo-1530984988758-75b2f1c6c5f3?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.3, "reviews": 120 },
+    "price": { "current": 15.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 37,
+    "category": "Accessories",
+    "title": "Brown Leather Wallet",
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.5, "reviews": 130 },
+    "price": { "current": 24.99, "old": 29.99, "discountPercent": 17 }
+  },
+  {
+    "id": 38,
+    "category": "Accessories",
+    "title": "Sunglasses Classic",
+    "image": "https://images.unsplash.com/photo-1503342250614-2b09e17f3ba0?w=500&q=80",
+    "badge": { "text": "Hot", "type": "danger" },
+    "rating": { "stars": 4.8, "reviews": 420 },
+    "price": { "current": 44.99, "old": 59.99, "discountPercent": 25 }
+  },
+  {
+    "id": 39,
+    "category": "Accessories",
+    "title": "Silver Bracelet",
+    "image": "https://images.unsplash.com/photo-1524594224059-4f4b2a67d2b5?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.7, "reviews": 310 },
+    "price": { "current": 35.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 40,
+    "category": "Accessories",
+    "title": "Metallic Handbag",
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df564?w=500&q=80",
+    "badge": { "text": "-20%", "type": "danger" },
+    "rating": { "stars": 4.6, "reviews": 200 },
+    "price": { "current": 56.00, "old": 70.00, "discountPercent": 20 }
+  },
+  {
+    "id": 41,
+    "category": "Accessories",
+    "title": "Sport Water Bottle",
+    "image": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.3, "reviews": 90 },
+    "price": { "current": 12.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 42,
+    "category": "Accessories",
+    "title": "Beige Scarf",
+    "image": "https://images.unsplash.com/photo-1519033460845-07dc5e5dfb3c?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.5, "reviews": 140 },
+    "price": { "current": 19.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 43,
+    "category": "Accessories",
+    "title": "Premium Earbuds",
+    "image": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.7, "reviews": 510 },
+    "price": { "current": 79.99, "old": 99.99, "discountPercent": 20 }
+  },
+  {
+    "id": 44,
+    "category": "Accessories",
+    "title": "Stylish Cap",
+    "image": "https://images.unsplash.com/photo-1542062703-20f2f1cc84c7?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.4, "reviews": 160 },
+    "price": { "current": 14.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 45,
+    "category": "Accessories",
+    "title": "Travel Duffel Bag",
+    "image": "https://images.unsplash.com/photo-1501870190083-767a26d7c7a5?w=500&q=80",
+    "badge": { "text": "-18%", "type": "warning" },
+    "rating": { "stars": 4.6, "reviews": 260 },
+    "price": { "current": 49.99, "old": 60.99, "discountPercent": 18 }
+  },
+  {
+    "id": 46,
+    "category": "Accessories",
+    "title": "Vintage Watch",
+    "image": "https://images.unsplash.com/photo-1524594224059-4f4b2a67d2b5?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.8, "reviews": 450 },
+    "price": { "current": 120.00, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 47,
+    "category": "Accessories",
+    "title": "Leather Keychain",
+    "image": "https://images.unsplash.com/photo-1565689574289-c3f9f9277d5c?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.2, "reviews": 78 },
+    "price": { "current": 9.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 48,
+    "category": "Accessories",
+    "title": "Black Shoulder Bag",
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df564?w=500&q=80",
+    "badge": { "text": "Hot", "type": "danger" },
+    "rating": { "stars": 4.9, "reviews": 520 },
+    "price": { "current": 69.99, "old": 89.99, "discountPercent": 22 }
+  },
+
+  {
+    "id": 49,
+    "category": "Sale",
+    "title": "Green Hoodie",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80",
+    "badge": { "text": "-25%", "type": "danger" },
+    "rating": { "stars": 4.5, "reviews": 102 },
+    "price": { "current": 24.00, "old": 32.00, "discountPercent": 25 }
+  },
+  {
+    "id": 50,
+    "category": "Sale",
+    "title": "Warm Winter Gloves",
+    "image": "https://images.unsplash.com/photo-1519033460845-07dc5e5dfb3c?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.3, "reviews": 80 },
+    "price": { "current": 8.99, "old": 12.99, "discountPercent": 31 }
+  },
+  {
+    "id": 51,
+    "category": "Sale",
+    "title": "Sport T-Shirt",
+    "image": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.2, "reviews": 132 },
+    "price": { "current": 15.50, "old": 19.99, "discountPercent": 22 }
+  },
+  {
+    "id": 52,
+    "category": "Sale",
+    "title": "Brown Winter Coat",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?w=500&q=80",
+    "badge": { "text": "-40%", "type": "danger" },
+    "rating": { "stars": 4.9, "reviews": 290 },
+    "price": { "current": 89.99, "old": 149.99, "discountPercent": 40 }
+  },
+  {
+    "id": 53,
+    "category": "Sale",
+    "title": "Running Shoes",
+    "image": "https://images.unsplash.com/photo-1520975918318-3e88f1a8f6c2?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.6, "reviews": 210 },
+    "price": { "current": 49.99, "old": 69.99, "discountPercent": 29 }
+  },
+  {
+    "id": 54,
+    "category": "Sale",
+    "title": "Blue Slim Fit Jeans",
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.4, "reviews": 160 },
+    "price": { "current": 28.99, "old": 39.99, "discountPercent": 27 }
+  },
+  {
+    "id": 55,
+    "category": "Sale",
+    "title": "Printed Casual Shirt",
+    "image": "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?w=500&q=80",
+    "badge": { "text": "-15%", "type": "warning" },
+    "rating": { "stars": 4.1, "reviews": 89 },
+    "price": { "current": 19.99, "old": 23.50, "discountPercent": 15 }
+  },
+  {
+    "id": 56,
+    "category": "Sale",
+    "title": "Black Sneakers",
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.7, "reviews": 350 },
+    "price": { "current": 59.99, "old": 89.99, "discountPercent": 33 }
+  },
+  {
+    "id": 57,
+    "category": "Sale",
+    "title": "Beige Backpack",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.3, "reviews": 98 },
+    "price": { "current": 29.50, "old": 39.99, "discountPercent": 26 }
+  },
+  {
+    "id": 58,
+    "category": "Sale",
+    "title": "Blue Cotton Shorts",
+    "image": "https://images.unsplash.com/photo-1519033460845-07dc5e5dfb3c?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.2, "reviews": 75 },
+    "price": { "current": 14.99, "old": 19.99, "discountPercent": 25 }
+  },
+  {
+    "id": 59,
+    "category": "Sale",
+    "title": "White Casual Cap",
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df564?w=500&q=80",
+    "badge": null,
+    "rating": { "stars": 4.4, "reviews": 110 },
+    "price": { "current": 9.99, "old": 14.99, "discountPercent": 33 }
+  },
+  {
+    "id": 60,
+    "category": "Sale",
+    "title": "Dark Grey Hoodie",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80",
+    "badge": { "text": "-18%", "type": "warning" },
+    "rating": { "stars": 4.6, "reviews": 185 },
+    "price": { "current": 26.00, "old": 31.99, "discountPercent": 18 }
+  }
 ]
 
