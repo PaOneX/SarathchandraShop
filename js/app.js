@@ -6,6 +6,8 @@ async function home() {
 
   loadNewArrivals();
   loadWomenProducts();
+  loadMenProducts();
+  loadAccessories();  
 }
 
 // fetch("components/login/login.html").then(res=>res.text()).then(data=>{
@@ -77,11 +79,35 @@ function generateProductCard(item) {
           <button class="btn btn-dark w-100 rounded-2 fw-semibold">Add to Cart</button>
         </div>
       </div>
-    </div>`;
-
-  return html;
-}
-
+      </div>`;
+      
+      return html;
+    }
+    
+    async function loadNewArrivals() {
+      try {
+        let res = await fetch("json/newArrivals.json");
+        let data = await res.json();
+    
+        if (!Array.isArray(data) || data.length === 0) return;
+    
+        const container = document.getElementById("NewArrivalcardSection");
+        if (!container) return;
+    
+        const newProducts = data.filter(
+          (item) => item.badge && item.badge.text === "New"
+        );
+    
+        container.innerHTML = "";
+    
+        newProducts.forEach((item) => {
+          const html = generateProductCard(item);
+          container.innerHTML += html;
+        });
+      } catch (error) {
+        console.error("Error loading new arrivals:", error);
+      }
+    }
 async function loadWomenProducts() {
   try {
     let res = await fetch("json/newArrivals.json");
@@ -105,29 +131,51 @@ async function loadWomenProducts() {
     console.error("Error loading women's products:", error);
   }
 }
-
-async function loadNewArrivals() {
+async function loadMenProducts() {
   try {
     let res = await fetch("json/newArrivals.json");
     let data = await res.json();
 
     if (!Array.isArray(data) || data.length === 0) return;
 
-    const container = document.getElementById("NewArrivalcardSection");
+    const container = document.getElementById("menCardSection");
     if (!container) return;
 
-    const newProducts = data.filter(
-      (item) => item.badge && item.badge.text === "New"
-    );
+    // Filter only Women's products
+    const menProducts = data.filter((item) => item.category === "Men");
 
     container.innerHTML = "";
 
-    newProducts.forEach((item) => {
+    menProducts.forEach((item) => {
       const html = generateProductCard(item);
       container.innerHTML += html;
     });
   } catch (error) {
-    console.error("Error loading new arrivals:", error);
+    console.error("Error loading men's products:", error);
   }
 }
+async function loadAccessories() {
+  try {
+    let res = await fetch("json/newArrivals.json");
+    let data = await res.json();
+
+    if (!Array.isArray(data) || data.length === 0) return;  
+
+    const container = document.getElementById("accessoriesCardSection");
+    if (!container) return;
+
+    // Filter only Women's products
+    const womenProducts = data.filter((item) => item.category === "Accessories");
+
+    container.innerHTML = "";
+
+    womenProducts.forEach((item) => {
+      const html = generateProductCard(item);
+      container.innerHTML += html;
+    });
+  } catch (error) {
+    console.error("Error loading accessories:", error);
+  }
+}
+
 
