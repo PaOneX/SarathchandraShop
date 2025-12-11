@@ -8,6 +8,7 @@ async function home() {
   loadWomenProducts();
   loadMenProducts();
   loadAccessories();  
+  loadSales();
 }
 
 // fetch("components/login/login.html").then(res=>res.text()).then(data=>{
@@ -175,6 +176,30 @@ async function loadAccessories() {
     });
   } catch (error) {
     console.error("Error loading accessories:", error);
+  }
+}
+  
+async function loadSales() {
+  try {
+    let res = await fetch("json/newArrivals.json");
+    let data = await res.json();
+
+    if (!Array.isArray(data) || data.length === 0) return;  
+
+    const container = document.getElementById("salesCardSection");
+    if (!container) return;
+
+    // Filter only Women's products
+    const womenProducts = data.filter((item) => item.category === "Sale");
+
+    container.innerHTML = "";
+
+    womenProducts.forEach((item) => {
+      const html = generateProductCard(item);
+      container.innerHTML += html;
+    });
+  } catch (error) {
+    console.error("Error loading sales:", error);
   }
 }
 

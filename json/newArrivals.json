@@ -1,5 +1,113 @@
 [
   {
+    "id": 101,
+    "category": "Men",
+    "title": "Premium Cotton Overshirt",
+    "image": "https://images.unsplash.com/photo-1542060748-10c28b62716d?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.7, "reviews": 80 },
+    "price": { "current": 42.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 102,
+    "category": "Women",
+    "title": "Soft Knit Crop Sweater",
+    "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b3?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.9, "reviews": 112 },
+    "price": { "current": 33.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 103,
+    "category": "Accessories",
+    "title": "Classic Gold Chain",
+    "image": "https://images.unsplash.com/photo-1524594224059-4f4b2a67d2b5?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.8, "reviews": 210 },
+    "price": { "current": 54.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 104,
+    "category": "Men",
+    "title": "Urban Streetwear Jacket",
+    "image": "https://images.unsplash.com/photo-1495121605193-b116b5b09d18?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.6, "reviews": 75 },
+    "price": { "current": 79.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 105,
+    "category": "Women",
+    "title": "High-Comfort Yoga Pants",
+    "image": "https://images.unsplash.com/photo-1514996937319-344454492b37?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.9, "reviews": 182 },
+    "price": { "current": 29.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 106,
+    "category": "Accessories",
+    "title": "Designer Sunglasses",
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.7, "reviews": 133 },
+    "price": { "current": 64.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 107,
+    "category": "Men",
+    "title": "Casual Linen Shorts",
+    "image": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.5, "reviews": 52 },
+    "price": { "current": 22.49, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 108,
+    "category": "Women",
+    "title": "Minimalist White Dress",
+    "image": "https://images.unsplash.com/photo-1520975918318-3e88f1a8f6c2?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.8, "reviews": 95 },
+    "price": { "current": 48.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 109,
+    "category": "Accessories",
+    "title": "Luxury Leather Strap Watch",
+    "image": "https://images.unsplash.com/photo-1524594224059-4f4b2a67d2b5?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.9, "reviews": 260 },
+    "price": { "current": 149.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 110,
+    "category": "Women",
+    "title": "Floral Printed Maxi Skirt",
+    "image": "https://images.unsplash.com/photo-1519033460845-07dc5e5dfb3c?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.6, "reviews": 123 },
+    "price": { "current": 34.50, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 111,
+    "category": "Men",
+    "title": "SportTech Running Shoes",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.8, "reviews": 305 },
+    "price": { "current": 59.99, "old": null, "discountPercent": null }
+  },
+  {
+    "id": 112,
+    "category": "Accessories",
+    "title": "Modern Travel Backpack",
+    "image": "https://images.unsplash.com/photo-1501870190083-767a26d7c7a5?w=500&q=80",
+    "badge": { "text": "New", "type": "primary" },
+    "rating": { "stars": 4.7, "reviews": 188 },
+    "price": { "current": 44.99, "old": null, "discountPercent": null }
+  },
+  {
     "id": 13,
     "category": "Men",
     "title": "Navy Bomber Jacket",
