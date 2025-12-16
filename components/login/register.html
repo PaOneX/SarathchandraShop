@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Register - Sarathchandra Clothing</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="../../css/login.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html, body {
+			height: 100%;
+			width: 100%;
+		}
+
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.register-container {
+			display: flex;
+			min-height: 100vh;
+			width: 100%;
+		}
+
+		.image-panel {
+			flex: 1;
+			background: linear-gradient(rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)), 
+						url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80') center/cover;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			color: white;
+			padding: 2rem;
+			text-align: center;
+		}
+
+		.image-panel-header h2 {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 0.5rem;
+		}
+
+		.image-panel-header p {
+			font-size: 0.95rem;
+			opacity: 0.9;
+		}
+
+		.image-panel-content h1 {
+			font-size: 2.2rem;
+			font-weight: 700;
+			margin-bottom: 1rem;
+		}
+
+		.image-panel-content p {
+			font-size: 1rem;
+			opacity: 0.85;
+			line-height: 1.6;
+		}
+
+		.form-panel {
+			flex: 1;
+			background: #f8f9fa;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 2rem;
+			overflow-y: auto;
+		}
+
+		.form-wrapper {
+			width: 100%;
+			max-width: 450px;
+		}
+
+		.form-header {
+			margin-bottom: 2rem;
+		}
+
+		.form-header h1 {
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: #333;
+			margin-bottom: 0.5rem;
+		}
+
+		.form-header p {
+			color: #666;
+			font-size: 0.95rem;
+		}
+
+		.form-row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+			margin-bottom: 1rem;
+		}
+
+		.form-group {
+			margin-bottom: 1rem;
+		}
+
+		.form-group label {
+			font-weight: 600;
+			color: #333;
+			font-size: 0.9rem;
+			margin-bottom: 0.4rem;
+			display: block;
+		}
+
+		.form-group input {
+			width: 100%;
+			padding: 0.75rem 0.9rem;
+			border: 2px solid #e0e0e0;
+			border-radius: 8px;
+			font-size: 0.95rem;
+			transition: border-color 0.3s;
+		}
+
+		.form-group input:focus {
+			outline: none;
+			border-color: #667eea;
+			box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+		}
+
+		.password-group {
+			position: relative;
+		}
+
+		.password-group input {
+			padding-right: 2.8rem;
+		}
+
+		.password-toggle {
+			position: absolute;
+			right: 0.8rem;
+			top: 2.1rem;
+			background: none;
+			border: none;
+			cursor: pointer;
+			color: #666;
+			font-size: 1rem;
+			z-index: 10;
+		}
+
+		.password-toggle:hover {
+			color: #667eea;
+		}
+
+		.register-btn {
+			width: 100%;
+			padding: 0.85rem;
+			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+			color: white;
+			border: none;
+			border-radius: 8px;
+			font-weight: 600;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: transform 0.3s, box-shadow 0.3s;
+			margin-top: 1rem;
+		}
+
+		.register-btn:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+		}
+
+		.login-link {
+			text-align: center;
+			margin-top: 1.5rem;
+			font-size: 0.9rem;
+		}
+
+		.login-link a {
+			color: #667eea;
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.login-link a:hover {
+			text-decoration: underline;
+		}
+
+		/* Tablet */
+		@media (max-width: 1024px) {
+			.image-panel {
+				flex: 0 0 35%;
+			}
+
+			.form-panel {
+				flex: 0 0 65%;
+			}
+
+			.image-panel-content h1 {
+				font-size: 1.8rem;
+			}
+		}
+
+		/* Mobile */
+		@media (max-width: 768px) {
+			.register-container {
+				flex-direction: column;
+				min-height: auto;
+			}
+
+			.image-panel {
+				flex: 0 0 auto;
+				min-height: 250px;
+				padding: 1.5rem;
+			}
+
+			.image-panel-header h2 {
+				font-size: 1.5rem;
+			}
+
+			.image-panel-content h1 {
+				font-size: 1.6rem;
+				margin-bottom: 0.8rem;
+			}
+
+			.form-panel {
+				flex: 1;
+				min-height: auto;
+				padding: 1.5rem 1rem;
+			}
+
+			.form-wrapper {
+				max-width: 100%;
+			}
+
+			.form-row {
+				gap: 0.75rem;
+			}
+		}
+
+		/* Small Mobile */
+		@media (max-width: 576px) {
+			.image-panel {
+				min-height: 200px;
+				padding: 1rem;
+			}
+
+			.image-panel-header h2 {
+				font-size: 1.2rem;
+			}
+
+			.image-panel-header p {
+				font-size: 0.85rem;
+			}
+
+			.image-panel-content h1 {
+				font-size: 1.4rem;
+				margin-bottom: 0.6rem;
+			}
+
+			.image-panel-content p {
+				font-size: 0.85rem;
+			}
+
+			.form-panel {
+				padding: 1rem;
+			}
+
+			.form-header h1 {
+				font-size: 1.4rem;
+			}
+
+			.form-header p {
+				font-size: 0.85rem;
+			}
+
+			.form-group input {
+				padding: 0.65rem 0.7rem;
+				font-size: 0.9rem;
+			}
+
+			.password-toggle {
+				top: 1.95rem;
+				right: 0.7rem;
+			}
+
+			.register-btn {
+				padding: 0.75rem;
+				font-size: 0.95rem;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="register-container">
+		<!-- Left Side - Image Panel -->
+		<div class="image-panel">
+			<div class="image-panel-header">
+				<a href="../../index.html" style="text-decoration: none; color: white;">
+					<h2>Sarathchandra</h2>
+				</a>
+				<p>Elevate Your Style, Define Your Comfort</p>
+			</div>
+
+			<div class="image-panel-content">
+				<h1>Join Our Fashion Community</h1>
+				<p>Create an account and get exclusive access to our premium collections and special offers</p>
+			</div>
+		</div>
+
+		<!-- Right Side - Register Form -->
+		<div class="form-panel">
+			<div class="form-wrapper">
+				<div class="form-header">
+					<h1>Create Account</h1>
+					<p>Join Sarathchandra and start shopping today</p>
+				</div>
+
+				<form id="registerForm" autocomplete="on">
+					<!-- First Name & Last Name Row -->
+					<div class="form-row">
+						<div class="form-group">
+							<label for="firstName">First Name</label>
+							<input id="firstName" name="firstName" type="text" placeholder="John" required>
+						</div>
+						<div class="form-group">
+							<label for="lastName">Last Name</label>
+							<input id="lastName" name="lastName" type="text" placeholder="Doe" required>
+						</div>
+					</div>
+
+					<!-- Email -->
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input id="email" name="email" type="email" placeholder="you@example.com" required>
+					</div>
+
+					<!-- Phone -->
+					<div class="form-group">
+						<label for="phone">Phone</label>
+						<input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" required>
+					</div>
+
+					<!-- Password -->
+					<div class="form-group password-group">
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password" placeholder="Min 8 characters" minlength="8" required>
+						<button type="button" class="password-toggle" id="togglePwd">
+							<i class="bi bi-eye"></i>
+						</button>
+					</div>
+
+					<!-- Confirm Password -->
+					<div class="form-group password-group">
+						<label for="confirmPassword">Confirm Password</label>
+						<input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" minlength="8" required>
+						<button type="button" class="password-toggle" id="toggleConfirmPwd">
+							<i class="bi bi-eye"></i>
+						</button>
+					</div>
+
+					<!-- Register Button -->
+					<button type="submit" class="register-btn">Register</button>
+				</form>
+
+				<div class="login-link">
+					Already have an account? <a href="login.html">Sign In</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		// Toggle password visibility
+		document.getElementById('togglePwd').addEventListener('click', function(e) {
+			e.preventDefault();
+			const pwdInput = document.getElementById('password');
+			const icon = this.querySelector('i');
+			if (pwdInput.type === 'password') {
+				pwdInput.type = 'text';
+				icon.classList.remove('bi-eye');
+				icon.classList.add('bi-eye-slash');
+			} else {
+				pwdInput.type = 'password';
+				icon.classList.remove('bi-eye-slash');
+				icon.classList.add('bi-eye');
+			}
+		});
+
+		// Toggle confirm password visibility
+		document.getElementById('toggleConfirmPwd').addEventListener('click', function(e) {
+			e.preventDefault();
+			const confirmInput = document.getElementById('confirmPassword');
+			const icon = this.querySelector('i');
+			if (confirmInput.type === 'password') {
+				confirmInput.type = 'text';
+				icon.classList.remove('bi-eye');
+				icon.classList.add('bi-eye-slash');
+			} else {
+				confirmInput.type = 'password';
+				icon.classList.remove('bi-eye-slash');
+				icon.classList.add('bi-eye');
+			}
+		});
+
+		// Form submission
+		document.getElementById('registerForm').addEventListener('submit', function(e) {
+			e.preventDefault();
+
+			const password = document.getElementById('password').value;
+			const confirmPassword = document.getElementById('confirmPassword').value;
+
+			// Validate passwords match
+			if (password !== confirmPassword) {
+				alert('Passwords do not match!');
+				return;
+			}
+
+			// Validate password strength
+			const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
+			if (!passwordRegex.test(password)) {
+				alert('Password must contain uppercase, lowercase, and numbers');
+				return;
+			}
+
+			console.log('Form submitted:', {
+				firstName: document.getElementById('firstName').value,
+				lastName: document.getElementById('lastName').value,
+				email: document.getElementById('email').value,
+				phone: document.getElementById('phone').value
+			});
+
+			alert('Account created successfully! Welcome to Sarathchandra.');
+		});
+	</script>
+</body>
+</html>
+
+		
+
