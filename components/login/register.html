@@ -6,183 +6,313 @@
 	<title>Register - Sarathchandra Clothing</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	<link rel="stylesheet" href="../../css/login.css">
 	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+		:root {
+			--primary: #2d3748;
+			--accent: #d4af37;
+			--text-dark: #1a202c;
+			--text-light: #718096;
+		}
+
 		* {
 			margin: 0;
 			padding: 0;
 			box-sizing: border-box;
 		}
 
-		html, body {
-			height: 100%;
-			width: 100%;
-		}
-
 		body {
-			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-			margin: 0;
-			padding: 0;
+			font-family: 'Inter', sans-serif;
+			overflow-x: hidden;
 		}
 
-		.register-container {
+		.register-wrapper {
 			display: flex;
 			min-height: 100vh;
-			width: 100%;
 		}
 
-		.image-panel {
+		/* Left Side - Company Info */
+		.company-side {
 			flex: 1;
-			background: linear-gradient(rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)), 
-						url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80') center/cover;
+			background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+			padding: 4rem 3rem;
 			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
+			justify-content: center;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.company-side::before {
+			content: '';
+			position: absolute;
+			width: 600px;
+			height: 600px;
+			background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+			top: -300px;
+			right: -300px;
+			border-radius: 50%;
+		}
+
+		.company-content {
+			position: relative;
+			z-index: 1;
+			max-width: 500px;
+			margin: 0 auto;
+			animation: fadeInLeft 0.8s ease;
+		}
+
+		@keyframes fadeInLeft {
+			from {
+				opacity: 0;
+				transform: translateX(-30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
+		}
+
+		.brand-logo {
+			display: inline-flex;
 			align-items: center;
-			color: white;
-			padding: 2rem;
-			text-align: center;
+			gap: 1rem;
+			margin-bottom: 3rem;
 		}
 
-		.image-panel-header h2 {
-			font-size: 2rem;
-			font-weight: 700;
-			margin-bottom: 0.5rem;
-		}
-
-		.image-panel-header p {
-			font-size: 0.95rem;
-			opacity: 0.9;
-		}
-
-		.image-panel-content h1 {
-			font-size: 2.2rem;
-			font-weight: 700;
-			margin-bottom: 1rem;
-		}
-
-		.image-panel-content p {
-			font-size: 1rem;
-			opacity: 0.85;
-			line-height: 1.6;
-		}
-
-		.form-panel {
-			flex: 1;
-			background: #f8f9fa;
+		.logo-icon {
+			width: 60px;
+			height: 60px;
+			background: var(--accent);
+			border-radius: 12px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: 2rem;
-			overflow-y: auto;
+			font-size: 1.8rem;
+			color: white;
 		}
 
-		.form-wrapper {
+		.brand-name {
+			font-family: 'Playfair Display', serif;
+			font-size: 1.5rem;
+			font-weight: 700;
+			color: white;
+			letter-spacing: 2px;
+		}
+
+		.company-title {
+			font-family: 'Playfair Display', serif;
+			font-size: 3rem;
+			font-weight: 700;
+			color: white;
+			line-height: 1.2;
+			margin-bottom: 1.5rem;
+		}
+
+		.company-title .highlight {
+			color: var(--accent);
+		}
+
+		.company-description {
+			color: #a0aec0;
+			font-size: 1.1rem;
+			line-height: 1.8;
+			margin-bottom: 3rem;
+		}
+
+		.features-list {
+			list-style: none;
+			padding: 0;
+		}
+
+		.features-list li {
+			color: white;
+			font-size: 1rem;
+			margin-bottom: 1.2rem;
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+		}
+
+		.features-list i {
+			color: var(--accent);
+			font-size: 1.3rem;
+		}
+
+		/* Right Side - Register Form */
+		.form-side {
+			flex: 1;
+			background: white;
+			padding: 4rem 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.form-container {
 			width: 100%;
 			max-width: 450px;
+			animation: fadeInRight 0.8s ease;
+		}
+
+		@keyframes fadeInRight {
+			from {
+				opacity: 0;
+				transform: translateX(30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateX(0);
+			}
 		}
 
 		.form-header {
-			margin-bottom: 2rem;
+			margin-bottom: 2.5rem;
 		}
 
-		.form-header h1 {
-			font-size: 1.8rem;
+		.form-header h2 {
+			font-family: 'Playfair Display', serif;
+			font-size: 2rem;
 			font-weight: 700;
-			color: #333;
+			color: var(--text-dark);
 			margin-bottom: 0.5rem;
 		}
 
 		.form-header p {
-			color: #666;
-			font-size: 0.95rem;
-		}
-
-		.form-row {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 1rem;
-			margin-bottom: 1rem;
+			color: var(--text-light);
+			font-size: 1rem;
 		}
 
 		.form-group {
-			margin-bottom: 1rem;
+			margin-bottom: 1.5rem;
 		}
 
-		.form-group label {
-			font-weight: 600;
-			color: #333;
-			font-size: 0.9rem;
-			margin-bottom: 0.4rem;
+		.form-label {
 			display: block;
+			font-weight: 600;
+			color: var(--text-dark);
+			margin-bottom: 0.5rem;
+			font-size: 0.9rem;
 		}
 
-		.form-group input {
+		.form-control {
 			width: 100%;
-			padding: 0.75rem 0.9rem;
-			border: 2px solid #e0e0e0;
+			height: 50px;
+			padding: 0 1rem;
+			border: 2px solid #e2e8f0;
 			border-radius: 8px;
 			font-size: 0.95rem;
-			transition: border-color 0.3s;
+			transition: all 0.3s ease;
+			background: #f8fafc;
 		}
 
-		.form-group input:focus {
+		.form-control:focus {
 			outline: none;
-			border-color: #667eea;
-			box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+			border-color: var(--accent);
+			background: white;
+			box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
 		}
 
-		.password-group {
+		.name-row {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+		}
+
+		.password-wrapper {
 			position: relative;
-		}
-
-		.password-group input {
-			padding-right: 2.8rem;
 		}
 
 		.password-toggle {
 			position: absolute;
-			right: 0.8rem;
-			top: 2.1rem;
+			right: 1rem;
+			top: 50%;
+			transform: translateY(-50%);
 			background: none;
 			border: none;
+			color: #94a3b8;
 			cursor: pointer;
-			color: #666;
-			font-size: 1rem;
-			z-index: 10;
+			padding: 0.5rem;
+			font-size: 1.1rem;
 		}
 
 		.password-toggle:hover {
-			color: #667eea;
+			color: var(--accent);
 		}
 
-		.register-btn {
+		.form-check {
+			display: flex;
+			align-items: flex-start;
+			gap: 0.75rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.form-check-input {
+			width: 18px;
+			height: 18px;
+			border: 2px solid #cbd5e1;
+			border-radius: 4px;
+			margin-top: 0.2rem;
+			cursor: pointer;
+			flex-shrink: 0;
+		}
+
+		.form-check-input:checked {
+			background-color: var(--accent);
+			border-color: var(--accent);
+		}
+
+		.form-check-label {
+			font-size: 0.85rem;
+			color: var(--text-light);
+			line-height: 1.5;
+			cursor: pointer;
+		}
+
+		.form-check-label a {
+			color: var(--accent);
+			text-decoration: none;
+			font-weight: 600;
+		}
+
+		.form-check-label a:hover {
+			text-decoration: underline;
+		}
+
+		.btn-register {
 			width: 100%;
-			padding: 0.85rem;
-			background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-			color: white;
+			height: 52px;
+			background: var(--accent);
 			border: none;
 			border-radius: 8px;
+			color: white;
 			font-weight: 600;
 			font-size: 1rem;
 			cursor: pointer;
-			transition: transform 0.3s, box-shadow 0.3s;
+			transition: all 0.3s ease;
 			margin-top: 1rem;
 		}
 
-		.register-btn:hover {
+		.btn-register:hover {
+			background: #c5a028;
 			transform: translateY(-2px);
-			box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+			box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
+		}
+
+		.btn-register:active {
+			transform: translateY(0);
 		}
 
 		.login-link {
 			text-align: center;
-			margin-top: 1.5rem;
+			margin-top: 2rem;
 			font-size: 0.9rem;
+			color: var(--text-light);
 		}
 
 		.login-link a {
-			color: #667eea;
+			color: var(--accent);
 			text-decoration: none;
 			font-weight: 600;
 		}
@@ -191,183 +321,186 @@
 			text-decoration: underline;
 		}
 
-		/* Tablet */
-		@media (max-width: 1024px) {
-			.image-panel {
-				flex: 0 0 35%;
-			}
+		.alert {
+			border: none;
+			border-radius: 8px;
+			padding: 1rem;
+			margin-bottom: 1.5rem;
+			display: none;
+			animation: slideDown 0.3s ease;
+		}
 
-			.form-panel {
-				flex: 0 0 65%;
+		@keyframes slideDown {
+			from {
+				opacity: 0;
+				transform: translateY(-10px);
 			}
-
-			.image-panel-content h1 {
-				font-size: 1.8rem;
+			to {
+				opacity: 1;
+				transform: translateY(0);
 			}
 		}
 
-		/* Mobile */
-		@media (max-width: 768px) {
-			.register-container {
+		.alert-success {
+			background: #d1fae5;
+			color: #065f46;
+		}
+
+		.alert-danger {
+			background: #fee2e2;
+			color: #991b1b;
+		}
+
+		/* Responsive */
+		@media (max-width: 992px) {
+			.register-wrapper {
 				flex-direction: column;
-				min-height: auto;
 			}
 
-			.image-panel {
-				flex: 0 0 auto;
-				min-height: 250px;
-				padding: 1.5rem;
+			.company-side {
+				min-height: 50vh;
+				padding: 3rem 2rem;
 			}
 
-			.image-panel-header h2 {
-				font-size: 1.5rem;
+			.company-title {
+				font-size: 2.5rem;
 			}
 
-			.image-panel-content h1 {
-				font-size: 1.6rem;
-				margin-bottom: 0.8rem;
-			}
-
-			.form-panel {
-				flex: 1;
-				min-height: auto;
-				padding: 1.5rem 1rem;
-			}
-
-			.form-wrapper {
-				max-width: 100%;
-			}
-
-			.form-row {
-				gap: 0.75rem;
+			.form-side {
+				padding: 3rem 2rem;
 			}
 		}
 
-		/* Small Mobile */
 		@media (max-width: 576px) {
-			.image-panel {
-				min-height: 200px;
-				padding: 1rem;
+			.company-side {
+				padding: 2rem 1.5rem;
 			}
 
-			.image-panel-header h2 {
-				font-size: 1.2rem;
+			.company-title {
+				font-size: 2rem;
 			}
 
-			.image-panel-header p {
-				font-size: 0.85rem;
+			.form-side {
+				padding: 2rem 1.5rem;
 			}
 
-			.image-panel-content h1 {
-				font-size: 1.4rem;
-				margin-bottom: 0.6rem;
+			.name-row {
+				grid-template-columns: 1fr;
 			}
 
-			.image-panel-content p {
-				font-size: 0.85rem;
-			}
-
-			.form-panel {
-				padding: 1rem;
-			}
-
-			.form-header h1 {
-				font-size: 1.4rem;
-			}
-
-			.form-header p {
-				font-size: 0.85rem;
-			}
-
-			.form-group input {
-				padding: 0.65rem 0.7rem;
-				font-size: 0.9rem;
-			}
-
-			.password-toggle {
-				top: 1.95rem;
-				right: 0.7rem;
-			}
-
-			.register-btn {
-				padding: 0.75rem;
-				font-size: 0.95rem;
+			.form-header h2 {
+				font-size: 1.75rem;
 			}
 		}
 	</style>
 </head>
 <body>
-	<div class="register-container">
-		<!-- Left Side - Image Panel -->
-		<div class="image-panel">
-			<div class="image-panel-header">
-				<a href="../../index.html" style="text-decoration: none; color: white;">
-					<h2>Sarathchandra</h2>
-				</a>
-				<p>Elevate Your Style, Define Your Comfort</p>
-			</div>
+	<div class="register-wrapper">
+		<!-- Left Side - Company Info -->
+		<div class="company-side">
+			<div class="company-content">
+				<div class="brand-logo">
+					<div class="logo-icon">
+						<i class="bi bi-bag-heart-fill"></i>
+					</div>
+					<span class="brand-name">SARATHCHANDRA</span>
+				</div>
 
-			<div class="image-panel-content">
-				<h1>Join Our Fashion Community</h1>
-				<p>Create an account and get exclusive access to our premium collections and special offers</p>
+				<h1 class="company-title">
+					Where <span class="highlight">Elegance</span> Meets Fashion
+				</h1>
+
+				<p class="company-description">
+					Experience premium quality clothing that defines your style. Join thousands of satisfied customers who trust us for their fashion needs.
+				</p>
+
+				<ul class="features-list">
+					<li>
+						<i class="bi bi-check-circle-fill"></i>
+						<span>Premium Quality Fabrics</span>
+					</li>
+					<li>
+						<i class="bi bi-check-circle-fill"></i>
+						<span>Latest Fashion Trends</span>
+					</li>
+					<li>
+						<i class="bi bi-check-circle-fill"></i>
+						<span>Exclusive Member Discounts</span>
+					</li>
+					<li>
+						<i class="bi bi-check-circle-fill"></i>
+						<span>Free Shipping on Orders</span>
+					</li>
+				</ul>
 			</div>
 		</div>
 
 		<!-- Right Side - Register Form -->
-		<div class="form-panel">
-			<div class="form-wrapper">
+		<div class="form-side">
+			<div class="form-container">
 				<div class="form-header">
-					<h1>Create Account</h1>
-					<p>Join Sarathchandra and start shopping today</p>
+					<h2>Create Account</h2>
+					<p>Start your fashion journey with us</p>
 				</div>
 
-				<form id="registerForm" autocomplete="on">
-					<!-- First Name & Last Name Row -->
-					<div class="form-row">
+				<!-- Alert Messages -->
+				<div class="alert alert-success" id="successAlert">
+					<i class="bi bi-check-circle-fill me-2"></i>Account created successfully!
+				</div>
+				<div class="alert alert-danger" id="errorAlert"></div>
+
+				<!-- Registration Form -->
+				<form id="registerForm">
+					<!-- Name Row -->
+					<div class="name-row">
 						<div class="form-group">
-							<label for="firstName">First Name</label>
-							<input id="firstName" name="firstName" type="text" placeholder="John" required>
+							<label for="firstName" class="form-label">First Name</label>
+							<input type="text" class="form-control" id="firstName" placeholder="John" required>
 						</div>
 						<div class="form-group">
-							<label for="lastName">Last Name</label>
-							<input id="lastName" name="lastName" type="text" placeholder="Doe" required>
+							<label for="lastName" class="form-label">Last Name</label>
+							<input type="text" class="form-control" id="lastName" placeholder="Doe" required>
 						</div>
 					</div>
 
 					<!-- Email -->
 					<div class="form-group">
-						<label for="email">Email</label>
-						<input id="email" name="email" type="email" placeholder="you@example.com" required>
+						<label for="email" class="form-label">Email Address</label>
+						<input type="email" class="form-control" id="email" placeholder="you@example.com" required>
 					</div>
 
 					<!-- Phone -->
 					<div class="form-group">
-						<label for="phone">Phone</label>
-						<input id="phone" name="phone" type="tel" placeholder="+1 (555) 000-0000" required>
+						<label for="phone" class="form-label">Phone Number</label>
+						<input type="tel" class="form-control" id="phone" placeholder="+1 (555) 000-0000" required>
 					</div>
 
 					<!-- Password -->
-					<div class="form-group password-group">
-						<label for="password">Password</label>
-						<input id="password" name="password" type="password" placeholder="Min 8 characters" minlength="8" required>
-						<button type="button" class="password-toggle" id="togglePwd">
-							<i class="bi bi-eye"></i>
-						</button>
+					<div class="form-group">
+						<label for="password" class="form-label">Password</label>
+						<div class="password-wrapper">
+							<input type="password" class="form-control" id="password" placeholder="Min 8 characters" minlength="8" required>
+							<button type="button" class="password-toggle" id="togglePassword">
+								<i class="bi bi-eye"></i>
+							</button>
+						</div>
 					</div>
 
-					<!-- Confirm Password -->
-					<div class="form-group password-group">
-						<label for="confirmPassword">Confirm Password</label>
-						<input id="confirmPassword" name="confirmPassword" type="password" placeholder="Re-enter password" minlength="8" required>
-						<button type="button" class="password-toggle" id="toggleConfirmPwd">
-							<i class="bi bi-eye"></i>
-						</button>
+					<!-- Terms -->
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="terms" required>
+						<label class="form-check-label" for="terms">
+							I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+						</label>
 					</div>
 
-					<!-- Register Button -->
-					<button type="submit" class="register-btn">Register</button>
+					<!-- Submit Button -->
+					<button type="submit" class="btn-register">
+						Create Account
+					</button>
 				</form>
 
+				<!-- Login Link -->
 				<div class="login-link">
 					Already have an account? <a href="login.html">Sign In</a>
 				</div>
@@ -376,71 +509,6 @@
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	<script>
-		// Toggle password visibility
-		document.getElementById('togglePwd').addEventListener('click', function(e) {
-			e.preventDefault();
-			const pwdInput = document.getElementById('password');
-			const icon = this.querySelector('i');
-			if (pwdInput.type === 'password') {
-				pwdInput.type = 'text';
-				icon.classList.remove('bi-eye');
-				icon.classList.add('bi-eye-slash');
-			} else {
-				pwdInput.type = 'password';
-				icon.classList.remove('bi-eye-slash');
-				icon.classList.add('bi-eye');
-			}
-		});
-
-		// Toggle confirm password visibility
-		document.getElementById('toggleConfirmPwd').addEventListener('click', function(e) {
-			e.preventDefault();
-			const confirmInput = document.getElementById('confirmPassword');
-			const icon = this.querySelector('i');
-			if (confirmInput.type === 'password') {
-				confirmInput.type = 'text';
-				icon.classList.remove('bi-eye');
-				icon.classList.add('bi-eye-slash');
-			} else {
-				confirmInput.type = 'password';
-				icon.classList.remove('bi-eye-slash');
-				icon.classList.add('bi-eye');
-			}
-		});
-
-		// Form submission
-		document.getElementById('registerForm').addEventListener('submit', function(e) {
-			e.preventDefault();
-
-			const password = document.getElementById('password').value;
-			const confirmPassword = document.getElementById('confirmPassword').value;
-
-			// Validate passwords match
-			if (password !== confirmPassword) {
-				alert('Passwords do not match!');
-				return;
-			}
-
-			// Validate password strength
-			const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
-			if (!passwordRegex.test(password)) {
-				alert('Password must contain uppercase, lowercase, and numbers');
-				return;
-			}
-
-			console.log('Form submitted:', {
-				firstName: document.getElementById('firstName').value,
-				lastName: document.getElementById('lastName').value,
-				email: document.getElementById('email').value,
-				phone: document.getElementById('phone').value
-			});
-
-			alert('Account created successfully! Welcome to Sarathchandra.');
-		});
-	</script>
+	
 </body>
 </html>
-
-		
-
